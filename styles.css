@@ -1,0 +1,160 @@
+/* Sophia Scott pet css */
+/* table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+table {
+  width: 70%;
+} */
+
+/* #scheduleTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#scheduleTable {
+  border: none;
+}
+
+#scheduleTable th,
+#scheduleTable td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+#scheduleTable th {
+  background-color: lightgray;
+}
+
+#scheduleTable td {
+  text-align: center;
+}
+
+#scheduleTable td:empty {
+  display: none;
+}
+
+#scheduleTable th:last-child,
+#scheduleTable td:last-child {
+  border-right: none;
+} */
+
+
+
+
+
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+table {
+  width: 70%;
+}
+
+#savedTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#scheduleTable {
+  /* width: 100%; */
+  /* border-collapse: collapse; */
+}
+
+#savedTable {
+  border: none;
+}
+
+#scheduleTable {
+  /* border: none; */
+}
+
+#savedTable th,
+#savedTable td,
+#scheduleTable th,
+#scheduleTable td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+#savedTable th,
+#scheduleTable th {
+  background-color: lightgray;
+}
+
+#savedTable td,
+#scheduleTable td {
+  text-align: center;
+}
+
+#savedTable td:empty,
+#scheduleTable td:empty {
+  display: none;
+}
+
+#savedTable th:last-child,
+#savedTable td:last-child,
+#scheduleTable th:last-child,
+#scheduleTable td:last-child {
+  border-right: none;
+}
+
+
+
+
+
+
+
+
+/* #savedTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#savedTable{
+  border: none;
+}
+#savedTable th,
+#savedTable td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+#savedTable th {
+  background-color: lightgray;
+}
+
+#savedTable td {
+  text-align: center;
+}
+
+#savedTable td:empty {
+  display: none;
+}
+
+#savedTable th:last-child,
+#savedTable td:last-child {
+  border-right: none;
+} */
+/* 
+#bottomRow {
+  position: relative;
+}
+
+#scheduleTable {
+  position: relative;
+}
+
+#scheduleTable:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Adjust the height as needed */
+/* } */
