@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="jquery-3.6.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="petJS.js"></script>
-    <link rel="stylesheet" href="petCss.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -37,7 +37,7 @@
             <th id="headerS">Saturday</th>
             <th id="headerSu">Sunday</th>
         </tr>
-        <!-- <script>
+        <script>
             function updateDates() {
                 var weekPicker = document.getElementById("weekPicker");
                 var chosenDate = new Date(weekPicker.value);
@@ -52,7 +52,7 @@
                     headerCells[i].textContent = daysOfWeek[dayIndex] + ' (' + (chosenDate.getDate() + i - 1) + ')';
                 }
             }
-        </script> -->
+        </script>
         <!-- <tr>
             <th> </th>
             <th><span id="dateM"></span></th>
@@ -99,7 +99,7 @@
             <td id="OtherSu"> Click to Add Hours </td>
             <td><button id="editButton" onclick="editallother()">Edit</button></td>
         </tr>
-        <!-- <script>
+        <script>
 
 
             function deleteSchoolHoursRow() {
@@ -134,7 +134,7 @@
                     document.getElementById("WHSu").textContent = "0";
                 }
             }
-        </script> -->
+        </script>
     </table>
     <table id="scheduleTable">
         <!-- <tr>
@@ -171,7 +171,7 @@
         <table id="savedTable"></table>
     </div>
 
-    <!-- <script>
+    <script>
         var savedTables = [];
         var currentTableIndex = -1;
 
@@ -310,7 +310,7 @@
                 message.textContent = "";
             }, 3000);
         }
-    </script> -->
+    </script>
 
 </body>
 
