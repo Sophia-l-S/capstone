@@ -269,15 +269,36 @@
             displaySavedTable();
         }
 
+
         // Function to display the save message
         function showSaveMessage() {
             var message = document.getElementById("message");
             message.textContent = "Table has been saved.";
 
+            // Create a popup container
+            var popup = document.createElement("div");
+            popup.className = "popup";
+            popup.textContent = message.textContent;
+
+            // Append the popup to the document body
+            document.body.appendChild(popup);
+
+            // Clear the message after 2 seconds
             setTimeout(function () {
                 message.textContent = "";
-            }, 3000);
+                // Remove the popup from the document body
+                document.body.removeChild(popup);
+            }, 2000); // Display the message for 2 seconds
+
+            // Position the popup in the center of the screen
+            var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            var popupWidth = popup.offsetWidth;
+            var popupHeight = popup.offsetHeight;
+            popup.style.left = (windowWidth - popupWidth) / 2 + "px";
+            popup.style.top = (windowHeight - popupHeight) / 2 + "px";
         }
+
 
         // Function to display the previous table in the savedTables array
         function previousTable() {
