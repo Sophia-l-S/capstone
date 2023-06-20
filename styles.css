@@ -6,7 +6,7 @@ body {
   /* opacity: 0.5; */
   /* background-blend-mode: lighten; */
   background-color: rgba(5, 2, 34, 0.263);
-
+  margin:0;
 }
 
 #top {
@@ -126,6 +126,7 @@ td:hover {
 
 
 #header {
+  top: 0;
   list-style-type: none;
   margin: 0;
   padding-left: 1em;
@@ -158,8 +159,10 @@ footer {
 
   color: white;
   padding: .1em;
-  margin: 1em;
+  margin-top: 1em;
+  /* margin: 1em; */
   text-align: right;
+  bottom: 0;
 }
 
 footer p {
