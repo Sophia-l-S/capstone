@@ -185,7 +185,7 @@
 
         </table>
         <!-- button to save the table -->
-        <button id="save" type="button" onclick="saveTable()">Save</button>
+        <button id="save" type="button" onclick="saveTable(); showSaveMessage()">Save</button>
         <div id="savedTables">
             <h2>Saved Tables</h2>
             <div>
@@ -260,6 +260,16 @@
                 }
             };
             xhr.send("date=" + encodeURIComponent(date) + "&table=" + encodeURIComponent(scheduleTable.innerHTML));
+        }
+        
+        //function to show that the table has been saved
+        function showSaveMessage() {
+            var message = document.getElementById("message");
+            message.textContent = "The table has been saved.";
+
+            setTimeout(function () {
+                message.textContent = "";
+            }, 3000);
         }
 
         // Function to clear the saved tables
