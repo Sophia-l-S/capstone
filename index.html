@@ -8,167 +8,194 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@200&display=swap"
+        rel="stylesheet">
+    <div id="header">
+        <a href="https://capstone-sophia-l-s.vercel.app/" id="home">Schedule Time Calculator</a>
+        <h3>Welcome</h3>
+    </div>
 </head>
 
 <body>
+    <div id="top">
+        <!-- Display introductory text and instructions -->
+        <p>This program will help you plan out your week!</p>
+        <p>Click on the spaces to enter the appropriate number of hours</p>
+        <p>Before you begin, be sure to customize (Edit button) the fixed number of hours for all other activities
+            (e.g., sleep, meals, travel)</p>
+        <p>When you are finished, hover your mouse over the bottom row boxes to see the updated number of hours</p>
 
-    <h2>Schedule Time Calculator</h2>
-    <p>This program will help you plan out your week!</p>
-    <p>Click on the the spaces to enter the aproprate number of hours</p>
-    <p>Before you begin be sure to customize(Edit button) the fixed number of hours for all other activities (Ex. sleep,
-        meals, travel)</p>
-    <p>When you are finshed hover your mouse over the bottom row boxes to see the updated number of hours</p>
+        <!-- Button to show/hide the introductory text -->
+        <button id="toggleButton" onclick="toggleTopText()">Show/Hide Text</button>
 
-    <label for="weekPicker">Select a week:</label>
-    <input type="date" id="weekPicker" name="weekPicker" onchange="updateDates()">
-    <br>
-    <br>
-
-
-    <button id="addRowButton">Add Activity</button>
-    <table id="scheduleTable">
-        <tr>
-            <th id="empty"></th>
-            <th id="headerM">Monday</th>
-            <th id="headerTu">Tuesday</th>
-            <th id="headerW">Wednesday</th>
-            <th id="headerT">Thursday</th>
-            <th id="headerF">Friday</th>
-            <th id="headerS">Saturday</th>
-            <th id="headerSu">Sunday</th>
-        </tr>
         <script>
-            function updateDates() {
-                var weekPicker = document.getElementById("weekPicker");
-                var chosenDate = new Date(weekPicker.value);
-                var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            // Function to toggle the visibility of the introductory text
+            function toggleTopText() {
+                const topDiv = document.querySelector('#top');
+                const topText = topDiv.querySelectorAll('p');
 
-                var headerCells = document.getElementsByTagName('th');
-                for (var i = 1; i < headerCells.length; i++) {
-                    var dayIndex = chosenDate.getDay() + i - 1;
-                    if (dayIndex > 6) {
-                        dayIndex -= 7;
+                topText.forEach((text) => {
+                    if (text.style.display === 'none') {
+                        text.style.display = 'block';
+                    } else {
+                        text.style.display = 'none';
                     }
-                    headerCells[i].textContent = daysOfWeek[dayIndex] + ' (' + (chosenDate.getDate() + i - 1) + ')';
+                });
+                updateDates();
+            }</script>
+    </div>
+
+    <!-- Allow the user to select a week -->
+    <div id="aweek">
+        <label for="weekPicker">Select a week:</label>
+        <input type="date" id="weekPicker" name="weekPicker" onchange="updateDates()">
+        <br>
+        <br>
+    </div>
+
+    <div id="middle">
+        <!-- Button to add a new activity -->
+        <button id="addRowButton">Add Activity</button>
+        <table id="scheduleTable">
+            <tr>
+                <th id="empty"></th>
+                <th id="headerM">Monday</th>
+                <th id="headerTu">Tuesday</th>
+                <th id="headerW">Wednesday</th>
+                <th id="headerT">Thursday</th>
+                <th id="headerF">Friday</th>
+                <th id="headerS">Saturday</th>
+                <th id="headerSu">Sunday</th>
+            </tr>
+            <script>
+                // Function to update the dates displayed in the table headers
+                function updateDates() {
+                    var weekPicker = document.getElementById("weekPicker");
+                    var chosenDate = new Date(weekPicker.value);
+                    var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                    var headerCells = document.getElementsByTagName('th');
+                    for (var i = 1; i < headerCells.length; i++) {
+                        var dayIndex = chosenDate.getDay() + i - 1;
+                        if (dayIndex > 6) {
+                            dayIndex -= 7;
+                        }
+                        var dayNumber = chosenDate.getDate() + i - 1;
+                        headerCells[i].textContent = daysOfWeek[dayIndex] + ' (' + dayNumber + ')';
+                    }
+
+                    var monthName = chosenDate.toLocaleString('default', { month: 'long' });
+                    var emptyCell = document.getElementById('empty');
+                    emptyCell.textContent = monthName;
                 }
-            }
-        </script>
-        <!-- <tr>
-            <th> </th>
-            <th><span id="dateM"></span></th>
-            <th><span id="dateTu"></span></th>
-            <th><span id="dateW"></span></th>
-            <th><span id="dateT"></span></th>
-            <th><span id="dateF"></span></th>
-            <th><span id="dateS"></span></th>
-            <th><span id="dateSu"></span></th>
-        </tr> -->
-        <script>
 
-        </script>
-        <tr id="schoolhours">
-            <td>School Hours:</td>
-            <td id="SHM"> Click to Add Hours </td>
-            <td id="SHTu"> Click to Add Hours </td>
-            <td id="SHW"> Click to Add Hours </td>
-            <td id="SHT"> Click to Add Hours </td>
-            <td id="SHF"> Click to Add Hours </td>
-            <td id="SHS"> Click to Add Hours </td>
-            <td id="SHSu"> Click to Add Hours </td>
-            <td><button onclick="deleteSchoolHoursRow()">Delete</button></td>
-        </tr>
-        <tr id="workhours">
-            <td>Work Hours:</td>
-            <td id="WHM"> Click to Add Hours </td>
-            <td id="WHTu"> Click to Add Hours </td>
-            <td id="WHW"> Click to Add Hours </td>
-            <td id="WHT"> Click to Add Hours </td>
-            <td id="WHF"> Click to Add Hours </td>
-            <td id="WHS"> Click to Add Hours </td>
-            <td id="WHSu"> Click to Add Hours </td>
-            <td><button onclick="deleteWorkHoursRow()">Delete</button></td>
-        </tr>
-        <tr>
-            <td id="allother">Hours for all other activities:</td>
-            <td id="OtherM"> Click to Add Hours </td>
-            <td id="OtherTu"> Click to Add Hours </td>
-            <td id="OtherW"> Click to Add Hours </td>
-            <td id="OtherT"> Click to Add Hours </td>
-            <td id="OtherF"> Click to Add Hours </td>
-            <td id="OtherS"> Click to Add Hours </td>
-            <td id="OtherSu"> Click to Add Hours </td>
-            <td><button id="editButton" onclick="editallother()">Edit</button></td>
-        </tr>
-        <script>
+            </script>
 
+            <script>
 
-            function deleteSchoolHoursRow() {
-                var confirmation = confirm("Are you sure you want to delete this row?");
-                if (confirmation) {
-                    var row = document.getElementById("schoolhours");
-                    row.parentNode.removeChild(row);
+            </script>
+            <!-- school hours for each day of the week -->
+            <tr id="schoolhours">
+                <td style="background-color:lightgray; font-weight:bold">School Hours:</td>
+                <td id="SHM"> Click to Add Hours </td>
+                <td id="SHTu"> Click to Add Hours </td>
+                <td id="SHW"> Click to Add Hours </td>
+                <td id="SHT"> Click to Add Hours </td>
+                <td id="SHF"> Click to Add Hours </td>
+                <td id="SHS"> Click to Add Hours </td>
+                <td id="SHSu"> Click to Add Hours </td>
+                <td><button onclick="deleteSchoolHoursRow()">Delete</button></td>
+            </tr>
+            <!-- work hours for each day of the week -->
+            <tr id="workhours">
+                <td style="background-color:lightgray; font-weight:bold" ;>Work Hours:</td>
+                <td id="WHM"> Click to Add Hours </td>
+                <td id="WHTu"> Click to Add Hours </td>
+                <td id="WHW"> Click to Add Hours </td>
+                <td id="WHT"> Click to Add Hours </td>
+                <td id="WHF"> Click to Add Hours </td>
+                <td id="WHS"> Click to Add Hours </td>
+                <td id="WHSu"> Click to Add Hours </td>
+                <td><button onclick="deleteWorkHoursRow()">Delete</button></td>
+            </tr>
+            <tr>
+                <!-- all other hours for each day of the week -->
+                <td id="allother" style="background-color:lightgray; font-weight:bold" ;>Hours for all other activities:
+                </td>
+                <td id="OtherM"> Click to Add Hours </td>
+                <td id="OtherTu"> Click to Add Hours </td>
+                <td id="OtherW"> Click to Add Hours </td>
+                <td id="OtherT"> Click to Add Hours </td>
+                <td id="OtherF"> Click to Add Hours </td>
+                <td id="OtherS"> Click to Add Hours </td>
+                <td id="OtherSu"> Click to Add Hours </td>
+                <td><button id="editButton" onclick="editallother()">Edit</button></td>
+            </tr>
+            <script>
 
-                    // Reset school hours values to 0
-                    document.getElementById("shm").innerHTML = "0";
-                    document.getElementById("SHTu").textContent = "0";
-                    document.getElementById("SHW").textContent = "0";
-                    document.getElementById("SHT").textContent = "0";
-                    document.getElementById("SHF").textContent = "0";
-                    document.getElementById("SHS").textContent = "0";
-                    document.getElementById("SHSu").textContent = "0";
+                // confirmation for deleteing the school hours row
+                function deleteSchoolHoursRow() {
+                    var confirmation = confirm("Are you sure you want to delete this row?");
+                    if (confirmation) {
+                        var row = document.getElementById("schoolhours");
+                        row.parentNode.removeChild(row);
+
+                        // Reset school hours values to 0
+                        document.getElementById("shm").innerHTML = "0";
+                        document.getElementById("SHTu").textContent = "0";
+                        document.getElementById("SHW").textContent = "0";
+                        document.getElementById("SHT").textContent = "0";
+                        document.getElementById("SHF").textContent = "0";
+                        document.getElementById("SHS").textContent = "0";
+                        document.getElementById("SHSu").textContent = "0";
+                    }
                 }
-            }
-            function deleteWorkHoursRow() {
-                var confirmation = confirm("Are you sure you want to delete this row?");
-                if (confirmation) {
-                    var row = document.getElementById("workhours");
-                    row.parentNode.removeChild(row);
+                // confirmation for deleteing the work hours row
+                function deleteWorkHoursRow() {
+                    var confirmation = confirm("Are you sure you want to delete this row?");
+                    if (confirmation) {
+                        var row = document.getElementById("workhours");
+                        row.parentNode.removeChild(row);
 
-                    // Reset work hours values to 0
-                    document.getElementById("WHM").textContent = "0";
-                    document.getElementById("WHTu").textContent = "0";
-                    document.getElementById("WHW").textContent = "0";
-                    document.getElementById("WHT").textContent = "0";
-                    document.getElementById("WHF").textContent = "0";
-                    document.getElementById("WHS").textContent = "0";
-                    document.getElementById("WHSu").textContent = "0";
+                        // Reset work hours values to 0
+                        document.getElementById("WHM").textContent = "0";
+                        document.getElementById("WHTu").textContent = "0";
+                        document.getElementById("WHW").textContent = "0";
+                        document.getElementById("WHT").textContent = "0";
+                        document.getElementById("WHF").textContent = "0";
+                        document.getElementById("WHS").textContent = "0";
+                        document.getElementById("WHSu").textContent = "0";
+                    }
                 }
-            }
-        </script>
-    </table>
-    <table id="scheduleTable">
-        <!-- <tr>
-            <th id="empty"> </th>
-            <th>Monday</th>
-            <th>Tuseday</th>
-            <th>Wednsday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-        </tr> -->
-        <tr id="bottomRow">
-            <td>Hours left in the day:</td>
-            <td id="LeftM">Hover to see total</td>
-            <td id="LeftTu">Hover to see total</td>
-            <td id="LeftW">Hover to see total</td>
-            <td id="LeftT">Hover to see total</td>
-            <td id="LeftF">Hover to see total</td>
-            <td id="LeftS">Hover to see total</td>
-            <td id="LeftSu">Hover to see total</td>
-            <!-- <td> </td> -->
-        </tr>
-    </table>
-    <button type="button" onclick="saveTable()">Save</button>
-    <div id="savedTables">
-        <h3>Saved Tables</h3>
-        <div>
-            <button onclick="previousTable()">&#8249;</button>
-            <button onclick="nextTable()">&#8250;</button>
-            <button id="deleteButton" onclick="deleteCurrentTable()">Delete</button>
+            </script>
+            <!-- hours left in the day bottom row -->
+            <tr id="bottomRow">
+                <td style="background-color:lightgray; font-weight:bold" ;>Hours left in the day:</td>
+                <td id="LeftM">Hover to see total</td>
+                <td id="LeftTu">Hover to see total</td>
+                <td id="LeftW">Hover to see total</td>
+                <td id="LeftT">Hover to see total</td>
+                <td id="LeftF">Hover to see total</td>
+                <td id="LeftS">Hover to see total</td>
+                <td id="LeftSu">Hover to see total</td>
+            </tr>
+
+        </table>
+        <!-- button to save the table -->
+        <button id="save" type="button" onclick="saveTable()">Save</button>
+        <div id="savedTables">
+            <h2>Saved Tables</h2>
+            <div>
+                <!-- buttons to toggle through the saved tables -->
+                <button onclick="previousTable()">&#8249;</button>
+                <button onclick="nextTable()">&#8250;</button>
+                <button id="deleteButton" onclick="deleteCurrentTable()">Delete</button>
+            </div>
+            <div id="message"></div>
+            <table id="savedTable"></table>
         </div>
-        <div id="message"></div>
-        <table id="savedTable"></table>
     </div>
 
     <script>
@@ -185,23 +212,35 @@
             }
         });
 
+        // function to save the tables
         function saveTable() {
+            // Clone the schedule table
             var scheduleTable = document.getElementById("scheduleTable").cloneNode(true);
+            // Get the selected date
             var date = document.getElementById("weekPicker").value;
 
+            // Remove delete buttons from the cloned table
             var deleteButtons = scheduleTable.querySelectorAll("button");
             for (var i = 0; i < deleteButtons.length; i++) {
                 deleteButtons[i].parentNode.removeChild(deleteButtons[i]);
             }
-
+            // Remove the edit button from the cloned table
             var editButton = scheduleTable.querySelector("#editButton");
             if (editButton) {
                 editButton.parentNode.removeChild(editButton);
             }
 
+            // Remove existing bottomRow if it exists
+            var existingBottomRow = scheduleTable.querySelector("#bottomRow");
+            if (existingBottomRow) {
+                existingBottomRow.parentNode.removeChild(existingBottomRow);
+            }
+
+            // Clone and append the bottomRow to the cloned table
             var bottomRow = document.getElementById("bottomRow").cloneNode(true);
             scheduleTable.appendChild(bottomRow);
 
+            // Add the date and the HTML content of the cloned table to the savedTables array
             savedTables.push({
                 date: date,
                 table: scheduleTable.innerHTML
@@ -222,7 +261,7 @@
             xhr.send("date=" + encodeURIComponent(date) + "&table=" + encodeURIComponent(scheduleTable.innerHTML));
         }
 
-
+        // Function to clear the saved tables
         function clearSavedTables() {
             savedTables = [];
             currentTableIndex = -1;
@@ -230,6 +269,7 @@
             displaySavedTable();
         }
 
+        // Function to display the save message
         function showSaveMessage() {
             var message = document.getElementById("message");
             message.textContent = "Table has been saved.";
@@ -239,6 +279,7 @@
             }, 3000);
         }
 
+        // Function to display the previous table in the savedTables array
         function previousTable() {
             if (currentTableIndex > 0) {
                 currentTableIndex--;
@@ -246,6 +287,7 @@
             }
         }
 
+        // Function to display the next table in the savedTables array
         function nextTable() {
             if (currentTableIndex < savedTables.length - 1) {
                 currentTableIndex++;
@@ -253,6 +295,7 @@
             }
         }
 
+        // Function to display the currently selected table
         function displaySavedTable() {
             var savedTable = document.getElementById("savedTable");
             savedTable.innerHTML = "";
@@ -270,6 +313,7 @@
             updateDeleteButton();
         }
 
+        // Function to update the delete button for the currently selected table
         function updateDeleteButton() {
             var deleteButton = document.getElementById("deleteButton");
 
@@ -277,7 +321,7 @@
             if (deleteButton) {
                 deleteButton.parentNode.removeChild(deleteButton);
             }
-
+            // Create and insert the delete button before the savedTable
             deleteButton = document.createElement("button");
             deleteButton.id = "deleteButton";
             deleteButton.textContent = "Delete";
@@ -288,10 +332,11 @@
             var savedTablesDiv = document.getElementById("savedTables");
             savedTablesDiv.insertBefore(deleteButton, savedTable);
         }
-
+        // Function to delete the currently selected table
         function deleteCurrentTable() {
             var confirmation = confirm("Are you sure you want to delete this saved table?");
             if (confirmation && currentTableIndex >= 0 && currentTableIndex < savedTables.length) {
+                // Remove the table from the savedTables array
                 savedTables.splice(currentTableIndex, 1);
                 currentTableIndex = Math.min(currentTableIndex, savedTables.length - 1);
                 displaySavedTable();
@@ -301,7 +346,7 @@
                 localStorage.setItem('savedTables', JSON.stringify(savedTables));
             }
         }
-
+        // Function to display the delete message
         function showDeleteMessage() {
             var message = document.getElementById("message");
             message.textContent = "The saved table has been deleted.";
@@ -313,5 +358,8 @@
     </script>
 
 </body>
+<footer>
+    <p>copyrignt © Sophia Scott 2023</p>
+</footer>
 
 </html>
