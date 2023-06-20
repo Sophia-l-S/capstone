@@ -4,18 +4,6 @@ jQuery(window).on("load", function () {
 
     /////////////////////////////////////////////////////////////////////////////school    
     //Monday school hours
-    // $('#SHM').click(schM);
-    // var shm = document.getElementById("SHM");
-
-    // function schM() {
-    //     var SHM = prompt("How many hours do you have school on Monday?");
-    //     shm.innerHTML = (+SHM);
-    //     console.log(shm.innerHTML);
-    //     if (shm.innerHTML === "NaN") {
-    //         shm.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#SHM').click(schM);
     var shm = document.getElementById("SHM");
 
@@ -43,18 +31,6 @@ jQuery(window).on("load", function () {
 
 
     //Tuseday school hours
-    // $('#SHTu').click(schTu);
-    // var shtu = document.getElementById("SHTu");
-
-    // function schTu() {
-    //     var SHTu = prompt("How many hours do you have school on Tuseday?");
-    //     shtu.innerHTML = (+SHTu);
-    //     console.log(shtu.innerHTML);
-    //     if (shtu.innerHTML === "NaN") {
-    //         shtu.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#SHTu').click(schTu);
     var shtu = document.getElementById("SHTu");
 
@@ -63,7 +39,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = shtu.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -82,18 +58,6 @@ jQuery(window).on("load", function () {
 
 
     //Wednsday school hours
-    // $('#SHW').click(schW);
-    // var shw = document.getElementById("SHW");
-
-    // function schW() {
-    //     var SHW = prompt("How many hours do you have school on Wednsday?");
-    //     shw.innerHTML = (+SHW);
-    //     console.log(shw.innerHTML);
-    //     if (shw.innerHTML === "NaN") {
-    //         shw.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#SHW').click(schW);
     var shw = document.getElementById("SHW");
 
@@ -102,7 +66,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = shw.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -118,18 +82,8 @@ jQuery(window).on("load", function () {
         shw.appendChild(inputField);
         inputField.focus();
     }
-    //Thursday school hours
-    // $('#SHT').click(schT);
-    // var sht = document.getElementById("SHT");
 
-    // function schT() {
-    //     var SHT = prompt("How many hours do you have school on Thursday?");
-    //     sht.innerHTML = (+SHT);
-    //     if (sht.innerHTML === "NaN") {
-    //         sht.style.background = "red";
-    //         return false;
-    //     }
-    // }
+    //Thursday school hours
     $('#SHT').click(schT);
     var sht = document.getElementById("SHT");
 
@@ -138,7 +92,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = sht.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -155,17 +109,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // //Friday school hours
-    // $('#SHF').click(schF);
-    // var shf = document.getElementById("SHF");
-
-    // function schF() {
-    //     var SHF = prompt("How many hours do you have school on Friday?");
-    //     shf.innerHTML = (+SHF);
-    //     if (shf.innerHTML === "NaN") {
-    //         shf.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#SHF').click(schF);
     var shf = document.getElementById("SHF");
 
@@ -174,7 +117,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = shf.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -191,18 +134,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // //Saturday school hours
-    // $('#SHS').click(schS);
-    // var shs = document.getElementById("SHS");
-
-    // function schS() {
-    //     var SHS = prompt("How many hours do you have school on Saturday?");
-    //     shs.innerHTML = (+SHS);
-    //     console.log(shs.innerHTML);
-    //     if (shs.innerHTML === "NaN") {
-    //         shs.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#SHS').click(schS);
     var shs = document.getElementById("SHS");
 
@@ -211,7 +142,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = shs.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -228,18 +159,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // //Sunday School hours
-    // $('#SHSu').click(schSu);
-    // var shsu = document.getElementById("SHSu");
-
-    // function schSu() {
-    //     var SHSu = prompt("How many hours do you have school on Sunday?");
-    //     shsu.innerHTML = (+SHSu);
-    //     console.log(shsu.innerHTML);
-    //     if (shsu.innerHTML === "NaN") {
-    //         shsu.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#SHSu').click(schSu);
     var shsu = document.getElementById("SHSu");
 
@@ -248,7 +167,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = shsu.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -266,17 +185,6 @@ jQuery(window).on("load", function () {
     }
     ///////////////////////////////////////////////////////////////////////////////////////////work    
     //Monday work hours
-    // $('#WHM').click(worM);
-    // var whm = document.getElementById("WHM");
-
-    // function worM() {
-    //     var WHM = prompt("How many hours do you have work on Monday?");
-    //     whm.innerHTML = (+WHM);
-    //     if (whm.innerHTML === "NaN") {
-    //         whm.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHM').click(worM);
     var whm = document.getElementById("WHM");
 
@@ -285,7 +193,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = whm.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -303,17 +211,6 @@ jQuery(window).on("load", function () {
     }
 
     // //Tuesday work hours
-    // $('#WHTu').click(worTu);
-    // var whtu = document.getElementById("WHTu");
-
-    // function worTu() {
-    //     var WHTu = prompt("How many hours do you have work on Tuesday?");
-    //     whtu.innerHTML = (+WHTu);
-    //     if (whtu.innerHTML === "NaN") {
-    //         whtu.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHTu').click(worTu);
     var whtu = document.getElementById("WHTu");
 
@@ -339,17 +236,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // //Wednsday work hours
-    // $('#WHW').click(worW);
-    // var whw = document.getElementById("WHW");
-
-    // function worW() {
-    //     var WHW = prompt("How many hours do you have work on Wednsday?");
-    //     whw.innerHTML = (+WHW);
-    //     if (whw.innerHTML === "NaN") {
-    //         whw.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHW').click(worW);
     var whw = document.getElementById("WHW");
 
@@ -358,7 +244,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = whw.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -375,17 +261,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // //Thursday work hours
-    // $('#WHT').click(worT);
-    // var wht = document.getElementById("WHT");
-
-    // function worT() {
-    //     var WHT = prompt("How many hours do you have work on Thursday?");
-    //     wht.innerHTML = (+WHT);
-    //     if (wht.innerHTML === "NaN") {
-    //         wht.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHT').click(worT);
     var wht = document.getElementById("WHT");
 
@@ -394,7 +269,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = wht.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -410,17 +285,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // //Friday work hours
-    // $('#WHF').click(worF);
-    // var whf = document.getElementById("WHF");
-
-    // function worF() {
-    //     var WHF = prompt("How many hours do you have work on Friday?");
-    //     whf.innerHTML = (+WHF);
-    //     if (whf.innerHTML === "NaN") {
-    //         whf.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHF').click(worF);
     var whf = document.getElementById("WHF");
 
@@ -429,7 +293,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = whf.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -445,17 +309,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // // Saturday work hours
-    // $('#WHS').click(worS);
-    // var whs = document.getElementById("WHS");
-
-    // function worS() {
-    //     var WHS = prompt("How many hours do you have work on Saturday?");
-    //     whs.innerHTML = (+WHS);
-    //     if (whs.innerHTML === "NaN") {
-    //         whs.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHS').click(worS);
     var whs = document.getElementById("WHS");
 
@@ -464,7 +317,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = whs.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -481,17 +334,6 @@ jQuery(window).on("load", function () {
         inputField.focus();
     }
     // // Sunday work hours
-    // $('#WHSu').click(worSu);
-    // var whsu = document.getElementById("WHSu");
-
-    // function worSu() {
-    //     var WHSu = prompt("How many hours do you have work on Sunday?");
-    //     whsu.innerHTML = (+WHSu);
-    //     if (whsu.innerHTML === "NaN") {
-    //         whsu.style.background = "red";
-    //         return false;
-    //     }
-    // }
     $('#WHSu').click(worSu);
     var whsu = document.getElementById("WHSu");
 
@@ -500,7 +342,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = whsu.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var value = inputField.value;
@@ -534,26 +376,7 @@ jQuery(window).on("load", function () {
             otherElement.style.background = "red";
         }
     }
-    // // // Monday
-    // $('#OtherM').click(OtherMon);
-    // var mother = document.getElementById("OtherM");
-    // function OtherMon() {
-    //     var additionalHours = prompt("Do you have any additional activities on Monday? How many hours will it take?");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             mother.innerHTML = combinedHours;
-    //             mother.style.background = "none";
-    //         } else {
-    //             mother.style.background = "red";
-    //         }
-    //     } else {
-    //         mother.style.background = "red";
-    //     }
-    // }
-
+    // Monday
     $('#OtherM').click(OtherMon);
     var mother = document.getElementById("OtherM");
 
@@ -589,25 +412,6 @@ jQuery(window).on("load", function () {
 
 
     // Tuesday
-    // $('#OtherTu').click(OtherTue);
-    // var tuother = document.getElementById("OtherTu");
-
-    // function OtherTue() {
-    //     var additionalHours = prompt("Do you have any additional activities on Tuesday? How many hours will it take?", totalHours + " hours will be added");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             tuother.innerHTML = combinedHours;
-    //             tuother.style.background = "none";
-    //         } else {
-    //             tuother.style.background = "red";
-    //         }
-    //     } else {
-    //         tuother.style.background = "red";
-    //     }
-    // }
     $('#OtherTu').click(OtherTue);
     var tuother = document.getElementById("OtherTu");
 
@@ -616,7 +420,7 @@ jQuery(window).on("load", function () {
         inputField.type = "number";
         inputField.value = tuother.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var additionalHours = inputField.value;
@@ -643,28 +447,12 @@ jQuery(window).on("load", function () {
     $('#OtherW').click(OtherWed);
     var wother = document.getElementById("OtherW");
 
-    // function OtherWed() {
-    //     var additionalHours = prompt("Do you have any additional activities on Wednesday? How many hours will it take?", totalHours + " hours will be added");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             wother.innerHTML = combinedHours;
-    //             wother.style.background = "none";
-    //         } else {
-    //             wother.style.background = "red";
-    //         }
-    //     } else {
-    //         wother.style.background = "red";
-    //     }
-    // }
     function OtherWed() {
         var inputField = document.createElement("input");
         inputField.type = "number";
         inputField.value = wother.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var additionalHours = inputField.value;
@@ -691,28 +479,12 @@ jQuery(window).on("load", function () {
     $('#OtherT').click(OtherThu);
     var tother = document.getElementById("OtherT");
 
-    // function OtherThu() {
-    //     var additionalHours = prompt("Do you have any additional activities on Thursday? How many hours will it take?", totalHours + " hours will be added");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             tother.innerHTML = combinedHours;
-    //             tother.style.background = "none";
-    //         } else {
-    //             tother.style.background = "red";
-    //         }
-    //     } else {
-    //         tother.style.background = "red";
-    //     }
-    // }
     function OtherThu() {
         var inputField = document.createElement("input");
         inputField.type = "number";
         inputField.value = tother.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var additionalHours = inputField.value;
@@ -739,28 +511,12 @@ jQuery(window).on("load", function () {
     $('#OtherF').click(OtherFri);
     var fother = document.getElementById("OtherF");
 
-    // function OtherFri() {
-    //     var additionalHours = prompt("Do you have any additional activities on Friday? How many hours will it take?", totalHours + " hours will be added");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             fother.innerHTML = combinedHours;
-    //             fother.style.background = "none";
-    //         } else {
-    //             fother.style.background = "red";
-    //         }
-    //     } else {
-    //         fother.style.background = "red";
-    //     }
-    // }
     function OtherFri() {
         var inputField = document.createElement("input");
         inputField.type = "number";
         inputField.value = fother.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var additionalHours = inputField.value;
@@ -787,28 +543,12 @@ jQuery(window).on("load", function () {
     $('#OtherS').click(OtherSat);
     var sother = document.getElementById("OtherS");
 
-    // function OtherSat() {
-    //     var additionalHours = prompt("Do you have any additional activities on Saturday? How many hours will it take?");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             sother.innerHTML = combinedHours;
-    //             sother.style.background = "none";
-    //         } else {
-    //             sother.style.background = "red";
-    //         }
-    //     } else {
-    //         sother.style.background = "red";
-    //     }
-    // }
     function OtherSat() {
         var inputField = document.createElement("input");
         inputField.type = "number";
         inputField.value = sother.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var additionalHours = inputField.value;
@@ -834,28 +574,12 @@ jQuery(window).on("load", function () {
     $('#OtherSu').click(OtherSun);
     var suother = document.getElementById("OtherSu");
 
-    // function OtherSun() {
-    //     var additionalHours = prompt("Do you have any additional activities on Sunday? How many hours will it take?");
-
-    //     if (!isNaN(additionalHours)) {
-    //         var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //         if (!isNaN(totalHours)) {
-    //             var combinedHours = totalHours + parseInt(additionalHours);
-    //             suother.innerHTML = combinedHours;
-    //             suother.style.background = "none";
-    //         } else {
-    //             suother.style.background = "red";
-    //         }
-    //     } else {
-    //         suother.style.background = "red";
-    //     }
-    // }
     function OtherSun() {
         var inputField = document.createElement("input");
         inputField.type = "number";
         inputField.value = suother.textContent;
         inputField.style.width = "40px";
-        inputField.step = "1"; // Set the step value to 1
+        inputField.step = "1";
 
         inputField.addEventListener("input", function () {
             var additionalHours = inputField.value;
@@ -880,80 +604,6 @@ jQuery(window).on("load", function () {
 
     //////////////////////////////////////////////////////////////////////////////////////////////new    
     // Function to handle the click event on the "Add Activity" button
-    // function handleAddActivityClick() {
-    //     // Prompt the user for the activity name
-    //     const activityName = prompt("Enter the name of the activity:");
-
-    //     if (activityName !== null && activityName.trim() !== '') {
-    //         const table = document.querySelector('table');
-
-    //         // Create a new row
-    //         const newRow = document.createElement('tr');
-
-    //         // Add the activity name as the title of the row
-    //         const titleCell = document.createElement('td');
-    //         titleCell.textContent = activityName;
-    //         newRow.appendChild(titleCell);
-
-    //         // Add the activity cells for each day of the week
-    //         for (let i = 0; i < 7; i++) {
-    //             const newCell = document.createElement('td');
-    //             newCell.textContent = 'Click to Add Hours';
-    //             newCell.id = `activityhours${i + 1}`; // Assign a unique ID to each activity cell
-    //             newRow.appendChild(newCell);
-
-    //             // Attach the click event handler to the new cell
-    //             newCell.addEventListener('click', handleActivityClick);
-    //         }
-
-    //         // Add the delete button cell
-    //         const deleteButtonCell = document.createElement('td');
-    //         const deleteButton = document.createElement('button');
-    //         deleteButton.textContent = 'Delete';
-    //         deleteButton.addEventListener('click', deleteActivityRow);
-    //         deleteButtonCell.appendChild(deleteButton);
-    //         newRow.appendChild(deleteButtonCell);
-
-    //         // Find the total row
-    //         const totalRow = table.querySelector('.total-row');
-
-    //         // Insert the new row above the total row
-    //         if (totalRow) {
-    //             table.insertBefore(newRow, totalRow);
-    //         } else {
-    //             table.appendChild(newRow);
-    //         }
-
-    //         // Calculate and update the total hours left
-    //         // updateHoursLeft();
-    //     }
-    // }
-
-    // // Function to handle the click event on the delete button
-    // function deleteActivityRow() {
-    //     var confirmation = confirm("Are you sure you want to delete this row?");
-    //     if (confirmation) {
-    //         var row = this.parentNode.parentNode; // Get the parent row of the delete button
-    //         row.parentNode.removeChild(row);
-    //     }
-    // }
-
-
-    // // Function to handle the click event on the activity cells
-    // function handleActivityClick() {
-    //     const hours = prompt("Enter the number of hours:");
-
-    //     if (hours !== null && !isNaN(hours)) {
-    //         this.textContent = hours;
-    //         // updateHoursLeft();
-    //     }
-    // }
-
-    // // Add event listener to the "Add Activity" button
-    // const addActivityButton = document.querySelector('#addRowButton');
-    // addActivityButton.addEventListener('click', handleAddActivityClick);
-
-    // Function to handle the click event on the "Add Activity" button
     function handleAddActivityClick() {
         // Create a new row
         const newRow = document.createElement('tr');
@@ -965,6 +615,9 @@ jQuery(window).on("load", function () {
             // Add the activity name as the title of the row
             const titleCell = document.createElement('td');
             titleCell.textContent = activityName;
+            titleCell.style.fontWeight = 'bold';
+            titleCell.style.backgroundColor = 'lightgray';
+
             newRow.appendChild(titleCell);
 
             // Add the activity cells for each day of the week
@@ -984,8 +637,13 @@ jQuery(window).on("load", function () {
             deleteButtonCell.appendChild(deleteButton);
             newRow.appendChild(deleteButtonCell);
 
-            // Find the total row
-            const totalRow = document.querySelector('table .total-row');
+            // // Find the total row
+            // const totalRow = document.querySelector('table .total-row');
+            // Find the bottom row
+            const bottomRow = document.getElementById('bottomRow');
+
+            // Insert the new row before the bottom row
+            bottomRow.before(newRow);
 
             // Insert the new row above the total row
             if (totalRow) {
@@ -1047,20 +705,6 @@ jQuery(window).on("load", function () {
         console.log(monTotal);
         LeftM.innerHTML = twofour;
     }
-    // var LeftM = document.getElementById("LeftM");
-    // $('#LeftM').mouseenter(LeftMon);
-
-    // function LeftMon() {
-    //     var totalHours = parseInt(document.getElementById("allother").textContent.split("+")[1]);
-    //     var activityhours1 = document.getElementById("activityhours1");
-    //     var activityhours1Value = activityhours1 ? +activityhours1.textContent : 0;
-    //     var motherValue = parseInt(mother.innerHTML) || totalHours; // Get the value of mother
-    //     var monTotal = (parseInt(shm.innerHTML) || 0) + (parseInt(whm.innerHTML) || 0) + motherValue + (parseInt(activityhours1Value) || 0);
-    //     var twofour = 24 - monTotal;
-    //     console.log(monTotal);
-    //     LeftM.innerHTML = twofour;
-    // }
-
 
     //Tuseday
     var LeftTu = document.getElementById("LeftTu");
@@ -1138,6 +782,18 @@ jQuery(window).on("load", function () {
         console.log(sunTotal);
         LeftSu.innerHTML = twofour;
     }
+
+
+
+    // Load saved tables from local storage on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        var storedTables = localStorage.getItem('savedTables');
+        if (storedTables) {
+            savedTables = JSON.parse(storedTables);
+            currentTableIndex = Math.max(savedTables.length - 1, -1);
+            displaySavedTable();
+        }
+    });
 
 
 
