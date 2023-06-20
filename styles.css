@@ -1,139 +1,77 @@
 /* Sophia Scott pet css */
-/* table,
-th,
-td {
-  border: 1px solid black;
-  text-align: center;
+
+body {
+  font-family: 'Manrope', sans-serif;
+  /* background-image: url(HD-wallpaper.jpg); */
+  /* opacity: 0.5; */
+  /* background-blend-mode: lighten; */
+  background-color: rgba(5, 2, 34, 0.263);
+
 }
-
-table {
-  width: 70%;
-} */
-
-/* #scheduleTable {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#scheduleTable {
-  border: none;
-}
-
-#scheduleTable th,
-#scheduleTable td {
-  padding: 8px;
-  border: 1px solid black;
-}
-
-#scheduleTable th {
-  background-color: lightgray;
-}
-
-#scheduleTable td {
-  text-align: center;
-}
-
-#scheduleTable td:empty {
-  display: none;
-}
-
-#scheduleTable th:last-child,
-#scheduleTable td:last-child {
-  border-right: none;
-} */
 
 #top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin: 1em;
 }
-p{
+
+#top p {
   margin: 5px;
+  font-size: 1.1em;
+
 }
-#middle{
+
+#top button {
+  align-items: right;
+}
+
+#middle {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 #aweek {
-  margin-left: 13%;
+  margin-left: 14%;
   margin-top: 3%;
-  margin-bottom: -3%;
-  /* position:relative; */
+  /* margin-bottom: -1%; */
 }
-/* #scheduleTable,
-#savedTable {
-  margin-top: 20px;
-  border-collapse: collapse;
+
+/* #weekPicker {}
+
+
+
+
+
+
+
+
+#savedTable{
+  width: 60%;
 } */
+#scheduleTable {
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: .5em;
 
-/* th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-} */
+}
 
-/* #addRowButton,
-#deleteButton,
-#editButton {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
-  background-color: rgb(39, 55, 77);
-  font-family: 'Playfair Display', serif;
-  color: #DDE6ED;
-  align-content: center;
-} */
+#save {
+  margin: 1em;
+}
 
 button {
-  border-radius: 5em;
+  /* border-radius: 5em; */
   font-size: 12px;
   padding: 10px;
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
 }
 
-/* button:hover {
-  background-color: #9DB2BF;
+#addRowButton {
+  margin-right: 65%;
+  margin-bottom: 1em;
 }
-
-tbody {
-  border-radius: 0;
-}
-
-#empty {
-  background-color: #526D82;
-}
-
-table th {
-  color: #27374D;
-} */
-
-/* table,
-th,
-td {
-  border: 1px solid black;
-  text-align: center;
-  border-radius: 1em;
-} */
 
 table {
   width: 70%;
@@ -161,7 +99,8 @@ table {
 
 #savedTable th,
 #scheduleTable th {
-  background-color: lightgray;
+  background-color: rgb(6, 3, 40);
+  color: rgb(221, 221, 221);
 }
 
 #savedTable td,
@@ -181,58 +120,70 @@ table {
   border-right: none;
 }
 
-td:hover{
+td:hover {
   background-color: lightgray;
 }
 
 
+#header {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: rgb(6, 3, 40);
 
-
-
-
-/* #savedTable {
-  width: 100%;
-  border-collapse: collapse;
-}
-#savedTable{
-  border: none;
-}
-#savedTable th,
-#savedTable td {
-  padding: 8px;
-  border: 1px solid black;
-}
-
-#savedTable th {
-  background-color: lightgray;
-}
-
-#savedTable td {
-  text-align: center;
-}
-
-#savedTable td:empty {
-  display: none;
-}
-
-#savedTable th:last-child,
-#savedTable td:last-child {
-  border-right: none;
-} */
-/* 
-#bottomRow {
-  position: relative;
-}
-
-#scheduleTable {
-  position: relative;
-}
-
-#scheduleTable:after {
-  content: "";
+  /* background-color: rgb(15, 40, 3); */
   display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px; /* Adjust the height as needed */
-/* } */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Manrope', sans-serif;
+}
+
+#home {
+  font-size: 1.3em;
+  padding-left: 1em;
+  padding-top: .8em;
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  color: white;
+}
+
+footer {
+  /* background-color: #333; */
+  background-color: rgb(6, 3, 40);
+
+  color: white;
+  padding: .1em;
+  margin: 1em;
+  text-align: right;
+}
+
+footer p {
+  padding-right: 5px;
+}
+
+
+#bottomRow td {
+  text-align: center;
+  padding: 5px;
+  width: 10%;
+
+}
+
+#bottomRow {
+  width: 10%;
+}
+
+#toggleButton {
+  border-radius: 0;
+  align-items: right;
+  margin-left: 90%;
+  padding: 0;
+  background: none !important;
+}
+
+
